@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="left">    
+            <div>
+                <input id="detailed" type="text" disabled>
+                <input id="inputHere" type="text" placeholder="0">
+            </div>
+
+            <div>
+                <button onclick="clearAll()" class="clrBtn">Clear</button>
+                <button onclick="deleteLast()" class="btn">Del</button>
+                <button onclick="inputKeys('/')" class="btn">&#247;</button>
+            </div>
+
+            <div>
+                <button onclick="squareFunc()" class="btn"><i>x<sup style="font-size: small;">2</sup></i></button>
+                <button onclick="cubeFunc()" class="btn"><i>x<sup style="font-size: small;">3</sup></i></button>
+                <button onclick="inputKeys('^')" class="btn">^</button>
+                <button onclick="squareRoot()" class="btn"> <i><sup style="font-size: 12px;">2</sup>&#8730; x</i> </button>
+            </div>
+
+            <div>
+                <button onclick="inputKeys('7')" class="btn">7</button>
+                <button onclick="inputKeys('8')" class="btn">8</button>
+                <button onclick="inputKeys('9')" class="btn">9</button>
+                <button onclick="inputKeys('*')" class="btn">x</button>
+            </div>
+            
+            <div>
+                <button onclick="inputKeys('4')" class="btn">4</button>
+                <button onclick="inputKeys('5')" class="btn">5</button>
+                <button onclick="inputKeys('6')" class="btn">6</button>
+                <button onclick="inputKeys('-')" class="btn">-</button>
+            </div>
+            
+            <div>
+                <button onclick="inputKeys('1')" class="btn">1</button>
+                <button onclick="inputKeys('2')" class="btn">2</button>
+                <button onclick="inputKeys('3')" class="btn">3</button>
+                <button onclick="inputKeys('+')" class="btn">+</button>
+            </div>
+            
+            <div>
+                <button onclick="signChange()" class="btn">+/-</button>
+                <button onclick="inputKeys('0')" class="btn">0</button>
+                <button onclick="inputKeys('.')" class="btn">.</button>
+                <button onclick="result()" class="btn" style="background-color: #3061c9;">=</button>
+            </div>
+        </div>
+
+        <div id="rightId" class="right">
+            <h3>HISTORY</h3>
+            <button class="deltBtn" onclick="deleteHistory()"><img src="Delete Icon.png" alt="Delete Button"></button>
+            <div style="text-align: right; margin-right: 20px;" id="paraHistory">
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+<script src="app.js"></script>
+</html>
